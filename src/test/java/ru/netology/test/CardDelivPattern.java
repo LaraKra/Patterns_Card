@@ -5,6 +5,10 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
 import ru.netology.data.DataGenerator;
 
+import java.time.Duration;
+
+import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -23,5 +27,6 @@ public class CardDelivPattern {
         $("[name='phone']").setValue(DataGenerator.phone());
         $(".checkbox__box").click();
         $(".button").click();
+        $(withText("Успешно!")).shouldBe(visible, Duration.ofSeconds(15));
     }
 }
