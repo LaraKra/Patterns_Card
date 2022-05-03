@@ -18,5 +18,6 @@ public class CardDelivPattern {
     public void shouldSendCorrectForm() {
         $(".input__control[type='text'][placeholder='Город']").setValue(DataGenerator.city());
         $("[data-test-id='date'] input").doubleClick().sendKeys(Keys.BACK_SPACE); // предварительная чистка поля с датой по умолчанию
+        $("[data-test-id='date'] input").setValue(DataGenerator.dateMeeting(3));
     }
 }

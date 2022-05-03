@@ -2,6 +2,8 @@ package ru.netology.data;
 
 import com.github.javafaker.Faker;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
 public class DataGenerator {
@@ -18,4 +20,9 @@ public class DataGenerator {
         int randCity = (int) Math.floor(Math.random() * bigCity.length);
         return bigCity[randCity];
     }
+
+    public static String dateMeeting(int plusDay) {
+        return LocalDate.now().plusDays(plusDay).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+    }
+
 }
