@@ -25,4 +25,7 @@ public class DataGenerator {
         return LocalDate.now().plusDays(plusDay).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
     }
 
+    public static String name() {
+        return faker.name().fullName();
+    }
 }
