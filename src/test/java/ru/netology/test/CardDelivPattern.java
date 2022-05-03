@@ -37,7 +37,6 @@ public class CardDelivPattern {
         $(".button").click();
         $(withText("Необходимо подтверждение")).shouldBe(visible, Duration.ofSeconds(15));
         $(".notification_status_error .button").click();
-        $(".notification__content").shouldBe(visible).shouldHave(exactText("Встреча успешно запланирована на " + DataGenerator.dateMeeting(6)));
 
     }
 }
