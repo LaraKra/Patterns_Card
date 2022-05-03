@@ -30,5 +30,9 @@ public class CardDelivPattern {
         $(".button").click();
         $(withText("Успешно!")).shouldBe(visible, Duration.ofSeconds(15));
         $(".notification__content").shouldBe(visible).shouldHave(exactText("Встреча успешно запланирована на " + DataGenerator.dateMeeting(3)));
+
+        $("[data-test-id='date'] input").doubleClick().sendKeys(Keys.BACK_SPACE); // предварительная чистка поля с датой по умолчанию
+        $("[data-test-id='date'] input").setValue(DataGenerator.dateMeeting(6));
+        $(".button").click();
     }
 }
