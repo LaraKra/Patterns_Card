@@ -28,4 +28,8 @@ public class DataGenerator {
     public static String name() {
         return faker.name().fullName();
     }
+
+    public static String phone() {
+        return faker.phoneNumber().phoneNumber();
+    }
 }

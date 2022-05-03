@@ -20,5 +20,6 @@ public class CardDelivPattern {
         $("[data-test-id='date'] input").doubleClick().sendKeys(Keys.BACK_SPACE); // предварительная чистка поля с датой по умолчанию
         $("[data-test-id='date'] input").setValue(DataGenerator.dateMeeting(3));
         $("[name='name']").setValue(DataGenerator.name());
+        $("[name='phone']").setValue(DataGenerator.phone());
     }
 }
