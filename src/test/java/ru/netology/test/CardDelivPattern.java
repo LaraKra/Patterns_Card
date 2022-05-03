@@ -7,6 +7,7 @@ import ru.netology.data.DataGenerator;
 
 import java.time.Duration;
 
+import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
@@ -28,5 +29,6 @@ public class CardDelivPattern {
         $(".checkbox__box").click();
         $(".button").click();
         $(withText("Успешно!")).shouldBe(visible, Duration.ofSeconds(15));
+        $(".notification__content").shouldBe(visible).shouldHave(exactText("Встреча успешно запланирована на " + DataGenerator.dateMeeting(3)));
     }
 }
