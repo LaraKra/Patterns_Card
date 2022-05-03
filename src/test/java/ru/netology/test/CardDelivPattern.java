@@ -21,5 +21,7 @@ public class CardDelivPattern {
         $("[data-test-id='date'] input").setValue(DataGenerator.dateMeeting(3));
         $("[name='name']").setValue(DataGenerator.name());
         $("[name='phone']").setValue(DataGenerator.phone());
+        $(".checkbox__box").click();
+        $(".button").click();
     }
 }
